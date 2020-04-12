@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Match;
 use Illuminate\Http\Request;
 use App\Game;
 
@@ -14,6 +15,15 @@ class DashboardController extends Controller
         return view('dashboard.index', [
             'games' => $games
         ]);
+    }
+
+    public function ongoingMatches($id) {
+
+        $matches = Match::ongoing()->where('game_id', $id);
+    }
+
+    public function upcomingMatches() {
+
     }
 
     // Dashboard - Ecommerce

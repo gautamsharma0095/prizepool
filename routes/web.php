@@ -14,6 +14,10 @@
 
 // Route url
 Route::get('/', 'DashboardController@dashboardAnalytics');
+Route::get('/match/ongoing/{id}', 'DashboardController@ongoingMatches');
+Route::get('/match/upcoming/{id}', 'DashboardController@upcomingMatches');
+Route::get('/matches/{id}', 'DashboardController@matches');
+Route::get('/matches/{id}', 'DashboardController@matches');
 
 // Route Dashboards
 Route::get('/dashboard-analytics', 'DashboardController@dashboardAnalytics');
