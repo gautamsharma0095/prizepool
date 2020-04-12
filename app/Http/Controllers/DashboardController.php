@@ -10,9 +10,9 @@ class DashboardController extends Controller
     // Dashboard - Analytics
     public function dashboardAnalytics(){
 
-        $games = 
+        $games = Game::all();
         return view('dashboard.index', [
-            'pageConfigs' => $pageConfigs
+            'games' => $games
         ]);
     }
 
