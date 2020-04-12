@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="759c262f-bcd4-4655-80c2-5267a3bc00be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/buy-now.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/buy-now.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/customizer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/customizer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,20 +100,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="189">
+              <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+              <folding>
+                <element signature="n#style#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LayoutController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="289">
+              <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -363,12 +359,12 @@
       <option name="presentableId" value="Default" />
       <updated>1586613761413</updated>
       <workItem from="1586613770085" duration="1515000" />
-      <workItem from="1586698381079" duration="1033000" />
+      <workItem from="1586698381079" duration="1436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4118000" />
+    <option name="totallyTimeSpent" value="4521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -388,7 +384,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -641,17 +637,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LayoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="289">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LayoutController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        <state relative-caret-position="189">
+          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

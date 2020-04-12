@@ -16,6 +16,17 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
                     </ul>
+                    <div class="breadcrumb-wrapper col-12 pl-0">
+                            <ol class="breadcrumb mb-0 pl-0" style="border-left:none;">
+                                {{-- this will load breadcrumbs dynamically from controller --}}
+                                    <li class="breadcrumb-item">
+                                            <span href="#"> Home </span>
+                                    </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#"> Home </a>
+                                </li>
+                            </ol>
+                    </div>
                     {{--<ul class="nav navbar-nav bookmark-icons">
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todo" data-toggle="tooltip" data-placement="top" title="Todo"><i class="ficon feather icon-check-square"></i></a></li>
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-chat" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon feather icon-message-square"></i></a></li>
