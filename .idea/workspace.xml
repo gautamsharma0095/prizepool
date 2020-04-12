@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="759c262f-bcd4-4655-80c2-5267a3bc00be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/buy-now.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/buy-now.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/customizer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/customizer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,88 +23,124 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="393">
+              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2020-04-12.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9312" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/buy-now.blade.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/customizer.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="209">
+              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/component-navbar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="1113" column="16" selection-start-line="1113" selection-start-column="16" selection-end-line="1113" selection-end-column="16" />
+              <folding>
+                <element signature="e#8974#9005#0#HTML" expanded="true" />
+                <element signature="e#9077#9107#0#HTML" expanded="true" />
+                <element signature="e#9206#9235#0#HTML" expanded="true" />
+                <element signature="e#9307#9337#0#HTML" expanded="true" />
+                <element signature="e#20429#20460#0#HTML" expanded="true" />
+                <element signature="e#20532#20562#0#HTML" expanded="true" />
+                <element signature="e#20661#20690#0#HTML" expanded="true" />
+                <element signature="e#20762#20792#0#HTML" expanded="true" />
+                <element signature="e#31310#31341#0#HTML" expanded="true" />
+                <element signature="e#31413#31443#0#HTML" expanded="true" />
+                <element signature="e#31542#31571#0#HTML" expanded="true" />
+                <element signature="e#31643#31673#0#HTML" expanded="true" />
+                <element signature="e#42191#42222#0#HTML" expanded="true" />
+                <element signature="e#42294#42324#0#HTML" expanded="true" />
+                <element signature="e#42423#42452#0#HTML" expanded="true" />
+                <element signature="e#42524#42554#0#HTML" expanded="true" />
+                <element signature="e#53069#53100#0#HTML" expanded="true" />
+                <element signature="e#53172#53202#0#HTML" expanded="true" />
+                <element signature="e#53301#53330#0#HTML" expanded="true" />
+                <element signature="e#53402#53432#0#HTML" expanded="true" />
+                <element signature="e#63912#63943#0#HTML" expanded="true" />
+                <element signature="e#64015#64045#0#HTML" expanded="true" />
+                <element signature="e#64144#64173#0#HTML" expanded="true" />
+                <element signature="e#64245#64275#0#HTML" expanded="true" />
+                <element signature="e#74735#74766#0#HTML" expanded="true" />
+                <element signature="e#74838#74868#0#HTML" expanded="true" />
+                <element signature="e#74967#74996#0#HTML" expanded="true" />
+                <element signature="e#75068#75098#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="318" column="14" selection-start-line="318" selection-start-column="14" selection-end-line="318" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LayoutController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Buy Now</find>
+      <find>CUSTOMIZER</find>
+      <find>mr-auto</find>
+      <find>header-navbar</find>
+      <find>breadcrumb</find>
+      <find>@include('panels.breadcrumb</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,6 +169,13 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/buy-now.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/customizer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/component-navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" />
       </list>
     </option>
   </component>
@@ -245,7 +291,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,12 +312,20 @@
             <path>
               <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
               <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="panels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,21 +363,21 @@
       <option name="presentableId" value="Default" />
       <updated>1586613761413</updated>
       <workItem from="1586613770085" duration="1515000" />
+      <workItem from="1586698381079" duration="1033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3085000" />
+    <option name="totallyTimeSpent" value="4118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17776097" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -337,6 +390,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -448,16 +502,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard-analytics.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
+        <state relative-caret-position="-1989">
+          <caret selection-end-line="485" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
@@ -468,19 +520,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2020-04-12.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9312" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
@@ -492,31 +532,126 @@
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard-analytics.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1989">
-          <caret selection-end-line="485" />
+        <state relative-caret-position="238">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/contentLayoutMaster.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="323">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="318" column="14" selection-start-line="318" selection-start-column="14" selection-end-line="318" selection-end-column="14" />
+        <state relative-caret-position="393">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/buy-now.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/customizer.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/component-navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="1113" column="16" selection-start-line="1113" selection-start-column="16" selection-end-line="1113" selection-end-column="16" />
+          <folding>
+            <element signature="e#8974#9005#0#HTML" expanded="true" />
+            <element signature="e#9077#9107#0#HTML" expanded="true" />
+            <element signature="e#9206#9235#0#HTML" expanded="true" />
+            <element signature="e#9307#9337#0#HTML" expanded="true" />
+            <element signature="e#20429#20460#0#HTML" expanded="true" />
+            <element signature="e#20532#20562#0#HTML" expanded="true" />
+            <element signature="e#20661#20690#0#HTML" expanded="true" />
+            <element signature="e#20762#20792#0#HTML" expanded="true" />
+            <element signature="e#31310#31341#0#HTML" expanded="true" />
+            <element signature="e#31413#31443#0#HTML" expanded="true" />
+            <element signature="e#31542#31571#0#HTML" expanded="true" />
+            <element signature="e#31643#31673#0#HTML" expanded="true" />
+            <element signature="e#42191#42222#0#HTML" expanded="true" />
+            <element signature="e#42294#42324#0#HTML" expanded="true" />
+            <element signature="e#42423#42452#0#HTML" expanded="true" />
+            <element signature="e#42524#42554#0#HTML" expanded="true" />
+            <element signature="e#53069#53100#0#HTML" expanded="true" />
+            <element signature="e#53172#53202#0#HTML" expanded="true" />
+            <element signature="e#53301#53330#0#HTML" expanded="true" />
+            <element signature="e#53402#53432#0#HTML" expanded="true" />
+            <element signature="e#63912#63943#0#HTML" expanded="true" />
+            <element signature="e#64015#64045#0#HTML" expanded="true" />
+            <element signature="e#64144#64173#0#HTML" expanded="true" />
+            <element signature="e#64245#64275#0#HTML" expanded="true" />
+            <element signature="e#74735#74766#0#HTML" expanded="true" />
+            <element signature="e#74838#74868#0#HTML" expanded="true" />
+            <element signature="e#74967#74996#0#HTML" expanded="true" />
+            <element signature="e#75068#75098#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panels/breadcrumb.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="55" lean-forward="true" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LayoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
       </provider>
     </entry>

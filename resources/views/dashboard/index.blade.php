@@ -9,23 +9,23 @@
         <div class="row">
             @foreach($games as $game)
                 <div class="col-md-4 col-12">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-body" style="padding: 8px;">
-                            <div class="row">
-                                <div class="col-12">
-                                    <img src="http://prizepool.skywinner.in/admin/{{ $game->banner }}" width="100%" height="200px">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body" style="padding: 8px;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="http://prizepool.skywinner.in/admin/{{ $game->banner }}" width="100%" height="200px">
+                                    </div>
                                 </div>
-                            </div>
-                            <hr/>
-                            <div class="row">
-                                <div class="col-12">
-                                    <center><h6>{{ $game->title }}</h6></center>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <center><h6>{{ $game->title }}</h6></center>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             @endforeach
         </div>
