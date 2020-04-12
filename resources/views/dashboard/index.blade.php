@@ -11,19 +11,21 @@
                 <div class="col-md-4 col-12">
                     <div class="card">
                         <div class="card-content">
-                            <div class="card-body" style="padding: 8px;">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <img src="http://prizepool.skywinner.in/admin/{{ $game->banner }}" width="100%" height="200px">
+                            <a href="{{ $game->type ? $game->url : url('/match/ongoing', $game->id) }}">
+                                <div class="card-body" style="padding: 8px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <img src="http://prizepool.skywinner.in/admin/{{ $game->banner }}" style="object-fit: cover;height: 200px; width: 100%">
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <center><h6>{{ $game->title }}</h6></center>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr/>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <center><h6>{{ $game->title }}</h6></center>
-                                    </div>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
