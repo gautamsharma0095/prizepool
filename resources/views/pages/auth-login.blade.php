@@ -21,12 +21,19 @@
                               <h4 class="mb-0">Login</h4>
                           </div>
                       </div>
-                      <p class="px-2">Welcome back, please login to your account.</p>
+                    <p class="px-2">Welcome back, please login to your account.</p>
+
                       <div class="card-content">
                           <div class="card-body pt-1">
-                              <form action="dashboard-analytics">
+                            @if($errors->has('error'))
+                              <div class="alert alert-danger mb-2" role="alert">
+                                {{ $errors->first('error') }}
+                              </div>
+                            @endif
+                              <form action="login-action" method="POST">
                                   <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                      <input type="text" class="form-control" id="user-name" placeholder="Username" required>
+                                    @csrf
+                                      <input type="text" class="form-control" id="user-name" name="email_or_username" placeholder="Username" required>
                                       <div class="form-control-position">
                                           <i class="feather icon-user"></i>
                                       </div>
@@ -34,13 +41,13 @@
                                   </fieldset>
 
                                   <fieldset class="form-label-group position-relative has-icon-left">
-                                      <input type="password" class="form-control" id="user-password" placeholder="Password" required>
+                                      <input type="password" class="form-control" id="user-password" name="password" placeholder="Password" required>
                                       <div class="form-control-position">
                                           <i class="feather icon-lock"></i>
                                       </div>
                                       <label for="user-password">Password</label>
                                   </fieldset>
-                                  <div class="form-group d-flex justify-content-between align-items-center">
+                                  <!-- <div class="form-group d-flex justify-content-between align-items-center">
                                       <div class="text-left">
                                           <fieldset class="checkbox">
                                             <div class="vs-checkbox-con vs-checkbox-primary">
@@ -55,22 +62,22 @@
                                           </fieldset>
                                       </div>
                                       <div class="text-right"><a href="auth-forgot-password" class="card-link">Forgot Password?</a></div>
-                                  </div>
+                                  </div> -->
                                   <a href="auth-register" class="btn btn-outline-primary float-left btn-inline">Register</a>
                                   <button type="submit" class="btn btn-primary float-right btn-inline">Login</button>
                               </form>
                           </div>
                       </div>
                       <div class="login-footer">
-                        <div class="divider">
-                          <div class="divider-text">OR</div>
-                        </div>
-                        <div class="footer-btn d-inline">
-                            <a href="#" class="btn btn-facebook"><span class="fa fa-facebook"></span></a>
-                            <a href="#" class="btn btn-twitter white"><span class="fa fa-twitter"></span></a>
-                            <a href="#" class="btn btn-google"><span class="fa fa-google"></span></a>
-                            <a href="#" class="btn btn-github"><span class="fa fa-github-alt"></span></a>
-                        </div>
+                            <div class="divider">
+                            <!-- <div class="divider-text">OR</div>
+                            </div>
+                            <div class="footer-btn d-inline">
+                                <a href="#" class="btn btn-facebook"><span class="fa fa-facebook"></span></a>
+                                <a href="#" class="btn btn-twitter white"><span class="fa fa-twitter"></span></a>
+                                <a href="#" class="btn btn-google"><span class="fa fa-google"></span></a>
+                                <a href="#" class="btn btn-github"><span class="fa fa-github-alt"></span></a>
+                            </div> -->
                       </div>
                   </div>
               </div>

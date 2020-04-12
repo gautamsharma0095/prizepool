@@ -118,11 +118,14 @@ Route::get('/page-invoice', 'PagesController@invoice');
 Route::get('/page-account-settings', 'PagesController@account_settings');
 
 // Route Authentication Pages
-Route::get('/auth-login', 'AuthenticationController@login');
+Route::get('/auth-login', 'AuthenticationController@login')->name('loginPage');
+Route::post('/login-action', 'AuthenticationController@loginAction');
+
 Route::get('/auth-register', 'AuthenticationController@register');
 Route::get('/auth-forgot-password', 'AuthenticationController@forgot_password');
 Route::get('/auth-reset-password', 'AuthenticationController@reset_password');
 Route::get('/auth-lock-screen', 'AuthenticationController@lock_screen');
+Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 
 // Route Miscellaneous Pages
 Route::get('/page-coming-soon', 'MiscellaneousController@coming_soon');
