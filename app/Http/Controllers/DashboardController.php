@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Game;
 
 class DashboardController extends Controller
 {
     // Dashboard - Analytics
     public function dashboardAnalytics(){
-        $pageConfigs = [
-            'pageHeader' => false
-        ];
 
-        return view('/pages/dashboard-analytics', [
+        $games = 
+        return view('dashboard.index', [
             'pageConfigs' => $pageConfigs
         ]);
     }
