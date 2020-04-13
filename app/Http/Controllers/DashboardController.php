@@ -2,19 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Match;
 use Illuminate\Http\Request;
+use App\Game;
 
 class DashboardController extends Controller
 {
     // Dashboard - Analytics
     public function dashboardAnalytics(){
-        $pageConfigs = [
-            'pageHeader' => false
-        ];
 
-        return view('/pages/dashboard-analytics', [
-            'pageConfigs' => $pageConfigs
+        $games = Game::all();
+        return view('dashboard.index', [
+            'games' => $games
         ]);
+    }
+
+    public function ongoingMatches($id) {
+
+        $matches = Match::ongoing()->where('game_id', $id)->get();
+        $matchBlade = 'matches/ongoing';
+
+        return view('dashboard.match', [
+            'matches' => $matches,
+            'matchBlade' => $matchBlade
+        ]);
+    }
+
+    public function upcomingMatches() {
+
     }
 
     // Dashboard - Ecommerce

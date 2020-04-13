@@ -31,9 +31,9 @@
             @else
                 <div class="content-wrapper">
                     {{-- Include Breadcrumb --}}
-                    @if($configData['pageHeader'] == true)
-                        @include('panels.breadcrumb')
-                    @endif
+                    {{--@if($configData['pageHeader'] == true)--}}
+                        {{--@include('panels.breadcrumb')--}}
+                    {{--@endif--}}
 
                     <div class="content-body">
                         {{-- Include Page Content --}}
