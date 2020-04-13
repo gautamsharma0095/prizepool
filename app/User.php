@@ -12,6 +12,7 @@ class User extends Authenticatable
     use HasApiTokens, Notifiable;
 
     protected $table = 'user_details';
+    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
