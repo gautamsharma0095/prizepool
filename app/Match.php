@@ -21,4 +21,9 @@ class Match extends Model
     {
         return $query->where('match_status', self::ONGOING);
     }
+
+    public function rule()
+    {
+        return $this->belongsTo('\App\Rule', 'match_rules', 'rule_id');
+    }
 }

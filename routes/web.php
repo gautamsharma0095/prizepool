@@ -127,6 +127,7 @@ Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@dashboardAnalytics');
+    Route::get('/match/{id}', 'MatchController@show');
     Route::get('/match/ongoing/{id}', 'DashboardController@ongoingMatches');
     Route::get('/match/upcoming/{id}', 'DashboardController@upcomingMatches');
     Route::get('/matches/{id}', 'DashboardController@matches');
