@@ -1,7 +1,7 @@
 <?php
 return [
     'custom' => [
-        'theme' => 'dark',					    // options[String]: 'light'(default), 'dark', 'semi-dark'
+        'theme' => 'light',					    // options[String]: 'light'(default), 'dark', 'semi-dark'
         'sidebarCollapsed' => false,		// options[Boolean]: true, false(default)
         'navbarColor' => '',			      // options[String]: bg-primary, bg-info, bg-warning, bg-success, bg-danger, bg-dark (default: '' for #fff)
         'menuType' => 'fixed',			  // options[String]: fixed(default) / static

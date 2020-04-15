@@ -35,6 +35,12 @@
                 </div>
                 @if(isset($roomDetail) && $roomDetail)
                     <hr>
+                    <div class="row">
+                        <div class="col">
+                            <label class="pl-0">Room Detail</label><br>
+                            <span>{{ $match->map }}</span>
+                        </div>
+                    </div>
                 @endif
                 <div class="card-btns d-flex justify-content-between">
                     <a href="#" class="btn gradient-light-success white waves-effect waves-light">Spectate</a>
