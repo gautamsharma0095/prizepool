@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rules\MatchOldPassword;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -95,9 +96,27 @@ class AuthenticationController extends Controller
       ]);
     }
 
-    // Lock Screen
+    // Logout Screen
     public function logout(){
       Auth::logout();
 	    return redirect()->route('loginPage');
+    }
+
+     // Change Password
+     public function changePassword(){
+      return view('/pages/change_password');
+    }
+
+     // Change Password Action
+     public function changePasswordAction(Request $request)
+     {
+      $request->validate([
+          'current_password' => ['required', new MatchOldPassword],
+          'new_password' => ['required'],
+          'confirmed' => ['same:new_password'],
+      ]);
+
+      User::find(auth()->user()->id)->update(['password'=> md5($request->new_password)]);
+      return back()->with('success', 'Password changed successfully.');
     }
 }
