@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use ImageResize;
 
 class ProfileController extends Controller
 {
@@ -76,6 +77,8 @@ class ProfileController extends Controller
         $user->dob = $request->dateOfBirth;
         $user->gender = $request->gender ? 'm' : 'f';
         $user->save();
+
+        return redirect()->back()->with('Profile edited successfully');
     }
 
     /**
@@ -87,5 +90,41 @@ class ProfileController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function changePicture(Request $request, $id)
+    {
+        $this->validate($request, [
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $image = $request->file('profile');
+        $imageName = 'profile-'. time().'.'.$image->extension();
+        $destinationPath = public_path('/uploads/thumbnail');
+        $img = ImageResize::make($image->path());
+
+
+        // --------- [ Resize Image ] ---------------
+
+        $img->resize(150, 150, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$imageName);
+        dd($destinationPath.'/'.$imageName);
+
+
+        // ----------- [ Uploads Image in Original Form ] ----------
+
+//        $destinationPath = public_path('/uploads/original');
+//
+//        $image->move($destinationPath, $input['imagename']);
+
+        // store into database table
+
+        $user = User::find($id);
+        $user->profile = $destinationPath.'/'.$imagename;
+        $user->save();
+
+        return back()
+            ->with('success', 'Image Uploaded successfully');
     }
 }

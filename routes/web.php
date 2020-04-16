@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/change-password', 'AuthenticationController@changePassword')->name('changePassword');
     Route::post('/change-password-action', 'AuthenticationController@changePasswordAction')->name('changePasswordAction');
 
+    Route::post('/profile/change-picture/{id}', 'ProfileController@changePicture')->name('profile.upload');
     Route::resource('/profile', 'ProfileController');
   // Route Dashboards
   Route::get('/dashboard-analytics', 'DashboardController@dashboardAnalytics');

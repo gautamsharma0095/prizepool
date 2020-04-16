@@ -31,8 +31,8 @@
                               </div>
                             @endif
                               <form action="login-action" method="POST">
-                                  <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                    @csrf
+                                  @csrf
+                                  <fieldset class="form-label-group position-relative has-icon-left">
                                       <input type="text" class="form-control" id="user-name" name="email_or_username" placeholder="Username" required>
                                       <div class="form-control-position">
                                           <i class="feather icon-user"></i>

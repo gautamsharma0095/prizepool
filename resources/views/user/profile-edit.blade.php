@@ -24,12 +24,16 @@
                             <a class="mr-2 my-25" href="#">
                                 <img src="{{ asset('images/portrait/small/avatar-s-12.jpg') }}" alt="users avatar"
                                      class="users-avatar-shadow rounded" height="77" width="77">
+                                <form action="{{ route('profile.upload', $profile->id) }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="file" name="profile" accept="image/*" id="profilePicker" style="display: none"/>
+                                </form>
                             </a>
                             <div class="media-body mt-50">
                                 <h4 class="media-heading">Angelo Sashington</h4>
                                 <div class="col-12 d-flex mt-1 px-0">
-                                    <a href="#" class="btn btn-primary d-none d-sm-block mr-75">Change</a>
-                                    <a href="#" class="btn btn-primary d-block d-sm-none mr-75"><i
+                                    <a href="#" class="btn btn-primary d-none d-sm-block mr-75 profilePicker">Change</a>
+                                    <a href="#" class="btn btn-primary d-block d-sm-none mr-75 profilePicker"><i
                                                 class="feather icon-edit-1"></i></a>
                                     <a href="#" class="btn btn-outline-danger d-none d-sm-block">Remove</a>
                                     <a href="#" class="btn btn-outline-danger d-block d-sm-none"><i class="feather icon-trash-2"></i></a>
@@ -127,18 +131,23 @@
 @endsection
 
 @section('vendor-script')
-    {{-- Vendor js files --}}
-{{--    <script src="{{ asset(mix('vendors/js/pickers/pickadate/picker.js')) }}"></script>--}}
+    <script src="{{ asset(mix('vendors/js/pickers/pickadate/picker.js')) }}"></script>
     <script src="{{ asset(mix('vendors/js/pickers/pickadate/picker.date.js')) }}"></script>
 @endsection
 
 @section('page-script')
-    {{-- Page js files --}}
-{{--    <script src="{{ asset(mix('js/scripts/pages/app-user.js')) }}"></script>--}}
-{{--    <script src="{{ asset(mix('js/scripts/navs/navs.js')) }}"></script>--}}
     <script>
         $('.pickadate-months-year').pickadate({
             format: 'dd/mm/yyyy'
+        });
+
+        $(".profilePicker").click(function () {
+           $("#profilePicker").trigger('click');
+        });
+
+        $("#profilePicker").on('change', function () {
+            var form = $(this).closest('form');
+            form.submit();
         });
     </script>
 @endsection
