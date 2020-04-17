@@ -30,7 +30,7 @@
                     <div class="tab-content">
                         <div class="media mb-2">
                             <a class="mr-2 my-25" href="#">
-                                <img src="{{ asset('images/portrait/small/avatar-s-12.jpg') }}" alt="users avatar"
+                                <img src="{{ $profile->user_profile ? url($profile->user_profile) : 'https://dummyimage.com/150x150/779/fff.png&text=' . $profile->username[0] }}" alt="users avatar"
                                      class="users-avatar-shadow rounded" height="77" width="77">
                                 <form action="{{ route('profile.upload', $profile->id) }}" method="POST" enctype="multipart/form-data">
                                     @csrf
@@ -38,13 +38,16 @@
                                 </form>
                             </a>
                             <div class="media-body mt-50">
-                                <h4 class="media-heading">Angelo Sashington</h4>
+                                <h4 class="media-heading">{{ $profile->full_name }}</h4>
                                 <div class="col-12 d-flex mt-1 px-0">
                                     <a href="#" class="btn btn-primary d-none d-sm-block mr-75 profilePicker">Change</a>
                                     <a href="#" class="btn btn-primary d-block d-sm-none mr-75 profilePicker"><i
                                                 class="feather icon-edit-1"></i></a>
-                                    <a href="#" class="btn btn-outline-danger d-none d-sm-block">Remove</a>
-                                    <a href="#" class="btn btn-outline-danger d-block d-sm-none"><i class="feather icon-trash-2"></i></a>
+                                    <form action="{{ route('profile.remove', $profile->id) }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <button class="btn btn-outline-danger d-none d-sm-block">Remove</button>
+                                        <button class="btn btn-outline-danger d-block d-sm-none"><i class="feather icon-trash-2"></i></button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

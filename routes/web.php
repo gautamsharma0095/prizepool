@@ -29,11 +29,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/match/ongoing/{id}', 'DashboardController@ongoingMatches');
     Route::get('/match/upcoming/{id}', 'DashboardController@upcomingMatches');
     Route::get('/matches/{id}', 'DashboardController@matches');
-    Route::get('/matches/{id}', 'DashboardController@matches');
     Route::get('/change-password', 'AuthenticationController@changePassword')->name('changePassword');
     Route::post('/change-password-action', 'AuthenticationController@changePasswordAction')->name('changePasswordAction');
 
     Route::post('/profile/change-picture/{id}', 'ProfileController@changePicture')->name('profile.upload');
+    Route::post('/profile/remove-picture/{id}', 'ProfileController@removePicture')->name('profile.remove');
     Route::resource('/profile', 'ProfileController');
   // Route Dashboards
   Route::get('/dashboard-analytics', 'DashboardController@dashboardAnalytics');
