@@ -16,17 +16,6 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
                     </ul>
-                    <div class="breadcrumb-wrapper col-12 pl-0">
-                            <ol class="breadcrumb mb-0 pl-0" style="border-left:none;">
-                                {{-- this will load breadcrumbs dynamically from controller --}}
-                                    <li class="breadcrumb-item">
-                                            <span href="#"> Home </span>
-                                    </li>
-                                <li class="breadcrumb-item">
-                                    <a href="#"> Home </a>
-                                </li>
-                            </ol>
-                    </div>
                     {{--<ul class="nav navbar-nav bookmark-icons">
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todo" data-toggle="tooltip" data-placement="top" title="Todo"><i class="ficon feather icon-check-square"></i></a></li>
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-chat" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon feather icon-message-square"></i></a></li>
@@ -116,9 +105,8 @@
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                     <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{ auth()->user()->fname }} {{ auth()->user()->lname }}</span><span class="user-status">Available</span></div><span><img class="round" src="{{asset('images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40" /></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="app-email"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="app-todo"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="app-chat"><i class="feather icon-message-square"></i> Chats</a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{ route('profile.show', auth()->id()) }}"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="{{ route('changePassword') }}"><i class="feather icon-user"></i>Change Password</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ route('changePassword') }}"><i class="feather icon-user"></i>Change Password</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"><i class="feather icon-power"></i> Logout</a>
                         </div>
                     </li>

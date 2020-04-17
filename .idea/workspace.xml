@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="759c262f-bcd4-4655-80c2-5267a3bc00be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/custom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="31" column="63" lean-forward="true" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+            <state relative-caret-position="206">
+              <caret line="36" column="29" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -30,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="572">
               <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
@@ -39,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/custom.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
@@ -48,11 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3961">
-              <caret line="233" selection-start-line="233" selection-end-line="233" />
+            <state relative-caret-position="169">
+              <caret line="107" column="139" selection-start-line="107" selection-start-column="139" selection-end-line="107" selection-end-column="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Match.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -122,6 +128,7 @@
       <find>$menuData</find>
       <find>dashboard-analytics</find>
       <find>changePasswordAction</find>
+      <find>My In</find>
       <find>change</find>
     </findStrings>
   </component>
@@ -155,7 +162,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/horizontalDetachedLayoutMaster.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/horizontalLayoutMaster.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/component-navbar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/detachedLayoutMaster.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/verticalLayoutMaster.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/panels/sidebar.blade.php" />
@@ -175,6 +181,7 @@
         <option value="$PROJECT_DIR$/config/custom.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" />
         <option value="$PROJECT_DIR$/resources/views/user/profile-edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/panels/navbar.blade.php" />
       </list>
     </option>
   </component>
@@ -302,24 +309,6 @@
             <path>
               <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
               <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -327,13 +316,6 @@
               <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Prizepool" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Prizepool" type="b2602c69:ProjectViewProjectNode" />
@@ -425,12 +407,12 @@
       <workItem from="1586941031312" duration="118000" />
       <workItem from="1586962741477" duration="7123000" />
       <workItem from="1587049187881" duration="6831000" />
-      <workItem from="1587131581197" duration="2363000" />
+      <workItem from="1587131581197" duration="3328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31888000" />
+    <option name="totallyTimeSpent" value="32853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -562,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LayoutController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -640,13 +615,6 @@
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -774,23 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="31" column="63" lean-forward="true" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user/profile-edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -802,6 +753,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="111" column="47" lean-forward="true" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/panels/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="107" column="139" selection-start-line="107" selection-start-column="139" selection-end-line="107" selection-end-column="139" />
         </state>
       </provider>
     </entry>
