@@ -19,6 +19,14 @@
         <div class="card">
             <div class="card-content">
                 <div class="card-body">
+                    @if(Session::has('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                            @php
+                                Session::forget('success');
+                            @endphp
+                        </div>
+                    @endif
                     <div class="tab-content">
                         <div class="media mb-2">
                             <a class="mr-2 my-25" href="#">

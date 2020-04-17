@@ -78,7 +78,7 @@ class ProfileController extends Controller
         $user->gender = $request->gender ? 'm' : 'f';
         $user->save();
 
-        return redirect()->back()->with('Profile edited successfully');
+        return back()->with('success', 'Profile edited successfully');
     }
 
     /**
