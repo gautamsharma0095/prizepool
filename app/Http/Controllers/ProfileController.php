@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-use ImageResize;
 
 class ProfileController extends Controller
 {
@@ -15,7 +14,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        $profile = User::find(auth()->id());
+        return view('user.profile-edit', compact('profile'));
     }
 
     /**
@@ -47,8 +47,7 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        $profile = User::find($id);
-        return view('user.profile-edit', compact('profile'));
+
     }
 
     /**
@@ -94,37 +93,31 @@ class ProfileController extends Controller
 
     public function changePicture(Request $request, $id)
     {
-        $this->validate($request, [
+        /*$this->validate($request, [
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        ]);*/
 
         $image = $request->file('profile');
-        $imageName = 'profile-'. time().'.'.$image->extension();
-        $destinationPath = public_path('/uploads/thumbnail');
-        $img = ImageResize::make($image->path());
-
-
-        // --------- [ Resize Image ] ---------------
-
-        $img->resize(150, 150, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPath.'/'.$imageName);
-        dd($destinationPath.'/'.$imageName);
-
-
-        // ----------- [ Uploads Image in Original Form ] ----------
-
-//        $destinationPath = public_path('/uploads/original');
-//
-//        $image->move($destinationPath, $input['imagename']);
-
-        // store into database table
+        $imageName = 'profile-'. time().'.'.$image->getClientOriginalExtension();
+        $path = '/uploads/thumbnail';
+        $destinationPath = public_path($path);
+        $image->move($destinationPath, $imageName);
 
         $user = User::find($id);
-        $user->profile = $destinationPath.'/'.$imagename;
+        $user->user_profile = $path . '/'. $imageName;
         $user->save();
 
         return back()
-            ->with('success', 'Image Uploaded successfully');
+            ->with('success', 'Profile picture uploaded successfully');
+    }
+
+    public function removePicture($id)
+    {
+        $user = User::find($id);
+        $user->user_profile = NULL;
+        $user->save();
+
+        return back()
+            ->with('success', 'Profile picture removed successfully');
     }
 }
