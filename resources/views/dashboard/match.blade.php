@@ -10,7 +10,7 @@
             <div class="card overflow-hidden">
               <div class="card-content">
                 <div class="card-body pb-0 pt-0">
-                  <ul class="nav nav-tabs" role="tablist">
+                  <ul class="nav nav-pills mt-1" role="tablist">
                     <li class="nav-item">
                     <a class="nav-link {{ isset($ongoing) ? 'active':'' }}" id="home-tab"  href="{{ route('ongoing', ['id'=> $gameId])}}" aria-controls="home" role="tab" aria-selected="{{ isset($ongoing) ? 'true':'false' }}">ONGOING</a>
                     </li>

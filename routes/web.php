@@ -36,6 +36,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/profile/change-picture/{id}', 'ProfileController@changePicture')->name('profile.upload');
     Route::post('/profile/remove-picture/{id}', 'ProfileController@removePicture')->name('profile.remove');
     Route::resource('/profile', 'ProfileController');
+
+
+    
   // Route Dashboards
   Route::get('/dashboard-analytics', 'DashboardController@dashboardAnalytics');
   Route::get('/dashboard-ecommerce', 'DashboardController@dashboardEcommerce');
