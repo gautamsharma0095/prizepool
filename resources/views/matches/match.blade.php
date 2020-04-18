@@ -52,10 +52,22 @@
 
                 <div class="card-btns d-flex justify-content-between">
                   @isset($upcoming)
-                    <button type="button" class="btn btn-outline-success waves-effect waves-light block btn-lg" data-toggle="modal" data-backdrop="false"
-                    data-target="#backdrop">
-                    <i class="fa fa-plus"></i> Join
-                    </button>
+                    @if(($match->roomSize() - $match->totalParticipants() > 0))
+                      @if(($match->match_type == 'Solo' && $match->userJoinedCount() < 1) || ($match->match_type == 'Duo' && $match->userJoinedCount() < 2) || ($match->match_type == 'Squad' && $match->userJoinedCount() < 4))
+                        <button type="button" class="btn btn-outline-danger waves-effect waves-light block btn-lg" data-toggle="modal" data-backdrop="false"
+                        data-target="#backdrop">
+                        <i class="fa fa-plus"></i> Join
+                        </button>
+                      @else
+                        <button type="button" class="btn btn-outline-success waves-effect waves-light block btn-lg" disabled>
+                          Joined
+                        </button>
+                      @endif
+                    @else
+                      <button type="button" class="btn btn-outline-info waves-effect waves-light block btn-lg" disabled>
+                        Slot Not Available
+                      </button>
+                    @endif
                   @endisset
 
                   @isset($ongoing)

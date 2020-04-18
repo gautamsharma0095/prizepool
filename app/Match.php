@@ -34,6 +34,13 @@ class Match extends Model
       return ($roomSize - $totalParticipants);
     }
 
+    public function userJoinedCount()
+    {
+      $userId = auth()->user()->id;
+      $count = $this->participants()->where('user_id',$userId)->count();
+      return $count;
+    }
+
     public function roomSize()
     {
         return $this->room->room_size;
