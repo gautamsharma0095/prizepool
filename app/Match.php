@@ -27,8 +27,34 @@ class Match extends Model
         return $query->where('match_status', self::FINISHED);
     }
 
+    public function slotLeft()
+    {
+      $roomSize = $this->roomSize();
+      $totalParticipants = $this->totalParticipants();
+      return ($roomSize - $totalParticipants);
+    }
+
+    public function roomSize()
+    {
+        return $this->room->room_size;
+    }
+
+    public function totalParticipants()
+    {
+
+        return $this->participants()->count();
+    }
+
     public function rule()
     {
         return $this->belongsTo('\App\Rule', 'match_rules', 'rule_id');
+    }
+
+    public function room(){
+      return $this->hasOne(Room::class);
+    }
+
+    public function participants(){
+      return $this->hasMany(Participant::class);
     }
 }

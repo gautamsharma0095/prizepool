@@ -44,9 +44,9 @@
                 @endif
 
                 @isset($upcoming)
-                <div class="text-center" id="example-caption-2">25 slot left</div>
+                  <div class="text-center" id="example-caption-2">{{ $match->slotLeft() }} slot left</div>
                 <div class="progress progress-bar-primary">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="25" aria-valuemax="100" style="width:25%" aria-describedby="example-caption-2"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{ $match->totalParticipants() }}" aria-valuemin="0" aria-valuemax="{{ $match->roomSize() }}" style="width:{{ ($match->totalParticipants() * 100)/$match->roomSize() }}%" aria-describedby="example-caption-2"></div>
                 </div>
                 @endisset
 
