@@ -26,8 +26,9 @@ Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@dashboardAnalytics');
     Route::get('/match/{id}', 'MatchController@show');
-    Route::get('/match/ongoing/{id}', 'DashboardController@ongoingMatches');
-    Route::get('/match/upcoming/{id}', 'DashboardController@upcomingMatches');
+    Route::get('/match/ongoing/{id}', 'DashboardController@ongoingMatches')->name("ongoing");
+    Route::get('/match/upcoming/{id}', 'DashboardController@upcomingMatches')->name("upcoming");;
+    Route::get('/match/finished/{id}', 'DashboardController@finishedMatches')->name("finished");;
     Route::get('/matches/{id}', 'DashboardController@matches');
     Route::get('/matches/{id}', 'DashboardController@matches');
     Route::get('/change-password', 'AuthenticationController@changePassword')->name('changePassword');

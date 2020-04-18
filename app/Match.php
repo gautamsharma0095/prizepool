@@ -8,7 +8,7 @@ class Match extends Model
 {
 	const UPCOMING = 0;
     const ONGOING = 1;
-    const COMPLETED = 2;
+    const FINISHED = 2;
 
     protected $table = 'match_details';
 
@@ -20,6 +20,11 @@ class Match extends Model
     public function scopeOngoing($query)
     {
         return $query->where('match_status', self::ONGOING);
+    }
+
+    public function scopeFinished($query)
+    {
+        return $query->where('match_status', self::FINISHED);
     }
 
     public function rule()
