@@ -18,7 +18,7 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav float-right">
-                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-danger badge-glow badge-up">5</span></a>
                         <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                             <li class="dropdown-menu-header">
                                 <div class="dropdown-header m-0 p-2">
@@ -72,7 +72,7 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                    <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{ auth()->user()->fname }} {{ auth()->user()->lname }}</span><span class="user-status">Available</span></div><span><img class="round" src="{{ optional(auth()->user())->user_profile ? urloptional(auth()->user())->user_profile : 'https://dummyimage.com/150x150/779/fff.png&text=' . optional(auth()->user())->username[0] }}"" alt="avatar" height="40" width="40" /></span>
+                    <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{ auth()->user()->fname }} {{ auth()->user()->lname }}</span><span class="user-status">Available</span></div><span><img class="round" src="{{ optional(auth()->user())->user_profile ? url(optional(auth()->user())->user_profile) : 'https://dummyimage.com/150x150/779/fff.png&text=' . optional(auth()->user())->username[0] }}"" alt="avatar" height="40" width="40" /></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{ route('profile.index') }}"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="{{ route('changePassword') }}"><i class="feather icon-user"></i>Change Password</a>
                         <div class="dropdown-divider"></div>

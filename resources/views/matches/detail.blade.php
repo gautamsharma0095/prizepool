@@ -13,7 +13,7 @@
 
               <div class="card-content">
                 <div class="card-body">
-                  <ul class="nav nav-tabs nav-justified" id="myTab2" role="tablist">
+                  <ul class="nav nav-pills nav-justified mb-0" id="myTab2" role="tablist">
                     <li class="nav-item">
                       <a class="nav-link active" id="home-tab-justified" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just" aria-selected="true">Game Details</a>
                     </li>
@@ -86,7 +86,20 @@
                       <div class="card">
                         <div class="card-content">
                             <div class="card-body p-1" >
-                                {!! $match->rule->rules !!}
+                            <div class="divider divider-warning mb-2">
+                              <div class="divider-text">Total participant(s) - <div class="badge badge-primary">{{ $totalParticipants }}</div></div>
+                            </div>
+                              @foreach($participants as $participant)
+                                <div class="chip chip-{{ Helper::bootClass() }} mr-1">
+                                  <div class="chip-body">
+                                    <div class="avatar">
+                                      <span><i class="feather icon-user"></i></span>
+                                    </div>
+                                    <span class="chip-text"><b>{{ $participant->pubg_id }} </b> - </span>
+                                    <span class="chip-text"> {{ Helper::showDate($participant->created) }}</span>
+                                  </div>
+                                </div>
+                              @endforeach
                             </div>
                         </div>
                     </div>

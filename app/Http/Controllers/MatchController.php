@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Match;
+use App\Participant;
 
 class MatchController extends Controller
 {
@@ -46,10 +47,13 @@ class MatchController extends Controller
      */
     public function show($id)
     {
-        $match = Match::find($id);
-
+        $match = Match::findOrFail($id);
+        $participants = $this->participants($id);
+        $totalParticipants = Participant::where('match_id', $id)->count();
         return view('matches.detail', [
-            'match' => $match
+            'match' => $match,
+            'participants' => $participants,
+            'totalParticipants' => $totalParticipants
         ]);
     }
 
@@ -85,5 +89,14 @@ class MatchController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function participants($matchId, $offset = 0)
+    {
+        return Participant::where('match_id', $matchId)
+        ->select('pubg_id', 'created')
+        ->offset($offset)
+        ->limit(100)
+        ->get();
     }
 }
