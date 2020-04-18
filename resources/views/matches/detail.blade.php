@@ -37,31 +37,31 @@
                                     <div class="row mb-1">
                                         <div class="col">
                                             <label class="pl-0">Prize Pool</label><br>
-                                            <span>{{ $match->prize_pool }}</span>
+                                            <span class="text-{{ Helper::bootClass() }}">{{ $match->prize_pool }}</span>
                                         </div>
                                         <div class="col">
                                             <label class="pl-0">Type</label><br>
-                                            <span>{{ $match->match_type }}</span>
+                                            <span class="text-{{ Helper::bootClass() }}">{{ $match->match_type }}</span>
                                         </div>
                                     </div>
                                     <div class="row mb-1">
                                         <div class="col">
                                             <label class="pl-0">Per Kill</label><br>
-                                            <span>{{ $match->per_kill }}</span>
+                                            <span class="text-{{ Helper::bootClass() }}">{{ $match->per_kill }}</span>
                                         </div>
                                         <div class="col">
                                             <label class="pl-0">Version</label><br>
-                                            <span>{{ $match->version }}</span>
+                                            <span class="text-{{ Helper::bootClass() }}">{{ $match->version }}</span>
                                         </div>
                                     </div>
                                     <div class="row mb-2">
                                         <div class="col">
                                             <label class="pl-0">Entry Fees</label><br>
-                                            <span>{{ $match->entry_fees }}</span>
+                                            <span class="text-{{ Helper::bootClass() }}">{{ $match->entry_fees }}</span>
                                         </div>
                                         <div class="col">
                                             <label class="pl-0">Map</label><br>
-                                            <span>{{ $match->map }}</span>
+                                            <span class="text-{{ Helper::bootClass() }}">{{ $match->map }}</span>
                                         </div>
                                     </div>
                                     @if(isset($roomDetail) && $roomDetail)
@@ -69,7 +69,7 @@
                                         <div class="row">
                                             <div class="col">
                                                 <label class="pl-0">Room Detail</label><br>
-                                                <span>{{ $match->map }}</span>
+                                                <span class="text-{{ Helper::bootClass() }}">{{ $match->map }}</span>
                                             </div>
                                         </div>
                                     @endif
