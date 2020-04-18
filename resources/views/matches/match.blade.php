@@ -42,9 +42,27 @@
                         </div>
                     </div>
                 @endif
+
+                @isset($upcoming)
+                <div class="text-center" id="example-caption-2">25 slot left</div>
+                <div class="progress progress-bar-primary">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="25" aria-valuemax="100" style="width:25%" aria-describedby="example-caption-2"></div>
+                </div>
+                @endisset
+
                 <div class="card-btns d-flex justify-content-between">
-                    <a href="#" class="btn gradient-light-success white waves-effect waves-light">Spectate</a>
-                    <a href="{{ url('/match', $match->id) }}" class="btn gradient-light-primary white waves-effect waves-light float-right">Play Now</a>
+                  @isset($upcoming)
+                    <button type="button" class="btn btn-outline-success waves-effect waves-light block btn-lg" data-toggle="modal" data-backdrop="false"
+                    data-target="#backdrop">
+                    <i class="fa fa-plus"></i> Join
+                    </button>
+                  @endisset
+
+                  @isset($ongoing)
+                  <a href="#" class="btn gradient-light-success white waves-effect waves-light">Spectate</a>
+                  <a href="{{ url('/match', $match->id) }}" class="btn gradient-light-primary white waves-effect waves-light float-right">Play Now</a>
+                  @endisset
+
                 </div>
             </div>
         </div>
