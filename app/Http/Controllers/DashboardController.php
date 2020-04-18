@@ -19,16 +19,42 @@ class DashboardController extends Controller
 
     public function ongoingMatches($id) {
 
-        $matches = Match::ongoing()->where('game_id', $id)->get();
-        $matchBlade = 'matches/ongoing';
+      $gameId = $id;
+      $ongoing = 1;
+      $matches = Match::ongoing()->where('game_id', $id)->get();
 
         return view('dashboard.match', [
             'matches' => $matches,
-            'matchBlade' => $matchBlade
+            'gameId' => $gameId,
+            'ongoing' => $ongoing,
         ]);
     }
 
-    public function upcomingMatches() {
+    public function upcomingMatches($id) {
+
+      $gameId = $id;
+      $upcoming = 1;
+      $matches = Match::upcoming()->where('game_id', $id)->get();
+
+        return view('dashboard.match', [
+            'matches' => $matches,
+            'gameId' => $gameId,
+            'upcoming' => $upcoming,
+        ]);
+
+    }
+
+    public function finishedMatches($id) {
+
+      $gameId = $id;
+      $finished = 1;
+      $matches = Match::finished()->where('game_id', $id)->get();
+
+        return view('dashboard.match', [
+            'matches' => $matches,
+            'gameId' => $gameId,
+            'finished' => $finished,
+        ]);
 
     }
 
