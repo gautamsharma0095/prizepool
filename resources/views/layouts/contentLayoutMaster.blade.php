@@ -11,10 +11,22 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@yield('title')</title>
+
         {{--<link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico">--}}
 
         {{-- Include core + vendor Styles --}}
         @include('panels/styles')
+
+
+        <style>
+          @media (max-width: 575.98px) {
+          .header-navbar.floating-nav {
+            width: calc(100vw - (100vw - 100%) - 2.5rem) !important;
+            margin-left: 1.2rem;
+            margin-right: 1.2rem;
+          }
+        }
+          </style>
 
     </head>
 

@@ -21,7 +21,7 @@
                       <a class="nav-link" id="profile-tab-justified" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just" aria-selected="false">Participants</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" id="messages-tab-justified" data-toggle="tab" href="#messages-just" role="tab" aria-controls="messages-just" aria-selected="false">Match Rules & Regulations</a>
+                      <a class="nav-link" id="messages-tab-justified" data-toggle="tab" href="#messages-just" role="tab" aria-controls="messages-just" aria-selected="false">Match Rules</a>
                     </li>
 
                   </ul>
