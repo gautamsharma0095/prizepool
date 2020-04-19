@@ -55,8 +55,12 @@ class AuthenticationController extends Controller
           'blankPage' => true
       ];
 
+      $terms = \App\TermCondition::first();
+      $policy = \App\PrivacyPolicy::first();
       return view('/pages/auth-register', [
-          'pageConfigs' => $pageConfigs
+          'pageConfigs' => $pageConfigs,
+          'term' => $terms,
+          'policy' => $policy
       ]);
     }
 

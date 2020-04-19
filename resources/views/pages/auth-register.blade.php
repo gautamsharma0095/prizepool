@@ -26,8 +26,20 @@
                           <div class="card-body pt-0">
                               <form action="dashboard-analytics">
                                   <div class="form-label-group">
-                                      <input type="text" id="inputName" class="form-control" placeholder="Name" required>
-                                      <label for="inputName">Name</label>
+                                      <input type="text" id="inputName" class="form-control" placeholder="First Name" required>
+                                      <label for="inputName">First Name</label>
+                                  </div>
+                                  <div class="form-label-group">
+                                      <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required>
+                                      <label for="inputLastName">Last Name</label>
+                                  </div>
+                                  <div class="form-label-group">
+                                      <input type="text" id="inputUserName" class="form-control" placeholder="User Name" required>
+                                      <label for="inputUserName">User Name</label>
+                                  </div>
+                                  <div class="form-label-group">
+                                      <input type="text" id="inputUserName" class="form-control" placeholder="Your 10 digit phone number." pattern="^\d{10}$" required>
+                                      <label for="phone">Phone Number</label>
                                   </div>
                                   <div class="form-label-group">
                                       <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
@@ -41,9 +53,15 @@
                                       <input type="password" id="inputConfPassword" class="form-control" placeholder="Confirm Password" required>
                                       <label for="inputConfPassword">Confirm Password</label>
                                   </div>
+
+                                  <div class="form-label-group">
+                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" required>
+                                      <label for="promoCode">Promo Code</label>
+                                  </div>
                                   <div class="form-group row">
                                       <div class="col-12">
                                           <fieldset class="checkbox">
+                                            <span class=""> By Registring, I agree to SkyWinner's <a href="#" data-toggle="modal" data-target="#large"> Terms & conditions and Privacy Policy</a>.</span>
                                             <div class="vs-checkbox-con vs-checkbox-primary">
                                               <input type="checkbox" checked>
                                               <span class="vs-checkbox">
@@ -51,8 +69,7 @@
                                                   <i class="vs-icon feather icon-check"></i>
                                                 </span>
                                               </span>
-                                              <span class=""> I accept the terms & conditions.</span>
-                                            </div>
+                                            </div>                                        
                                           </fieldset>
                                       </div>
                                   </div>
@@ -66,5 +83,45 @@
           </div>
       </div>
   </div>
+
+    <div class="modal fade text-left " id="large" role="dialog" >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-body">
+                <ul class="nav nav-pills nav-justified mb-0" id="myTab2" role="tablist">                 
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#term" role="tab">Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#privacy" role="tab">Privacy Policy</a>
+                    </li>
+                </ul>
+                <div class="tab-content pt-1">
+                    <div class="tab-pane active" id="term">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    {!! $term->content !!}
+                                </div>    
+                            </div>
+                        </div>              
+                    </div>
+                    <div class="tab-pane" id="privacy">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    {!! $policy->content !!}
+                                </div>    
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
 </section>
 @endsection

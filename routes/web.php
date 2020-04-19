@@ -37,6 +37,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/profile/remove-picture/{id}', 'ProfileController@removePicture')->name('profile.remove');
     Route::resource('/profile', 'ProfileController');
 
+    //customer-support
+    Route::get('/customer-support', 'MyAccountController@customerSupport')->name('customer-support');
+    Route::get('/about', 'MyAccountController@about')->name('about-us');
+    Route::get('/privacy-policy', 'MyAccountController@privacyPolicy')->name('privacy-policy');
+    Route::get('/term-condition', 'MyAccountController@termCondition')->name('term-condition');
+
 
     
   // Route Dashboards

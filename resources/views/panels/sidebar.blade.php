@@ -14,6 +14,7 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                     
             {{-- Foreach menu item starts --}}
             @foreach($menuData[0]->menu as $menu)
                 @if(isset($menu->navheader))
@@ -48,6 +49,43 @@
                 @endif
             @endforeach
             {{-- Foreach menu item ends --}}
+
+            <li class="nav-item ">
+                <a href="#">
+                    <i class="fa fa-life-ring m-0" style="margin-right:14px !important;"></i>
+                    <span class="menu-title">Support</span>
+                </a>
+
+                <ul class="menu-content" style="">
+                    <li >
+                        <a href="{{ route('customer-support') }}">
+                            <i class="feather icon-circle"></i>
+                            <span class="menu-title">Customer Support</span>
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="{{ route('privacy-policy') }}">
+                            <i class="feather icon-circle"></i>
+                            <span class="menu-title">Privacy Policy</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('term-condition') }}">
+                            <i class="feather icon-circle"></i>
+                            <span class="menu-title">Term Condition</span>
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="{{ route('about-us') }}">
+                            <i class="feather icon-circle"></i>
+                            <span class="menu-title">About Us</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
