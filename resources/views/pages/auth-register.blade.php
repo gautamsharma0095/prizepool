@@ -24,44 +24,80 @@
                       <p class="px-2">Fill the below form to create a new account.</p>
                       <div class="card-content">
                           <div class="card-body pt-0">
-                              <form action="dashboard-analytics">
+                              <form action="{{ route('user.register') }}" method="post">
+                                  @csrf
                                   <div class="form-label-group">
-                                      <input type="text" id="inputName" class="form-control" placeholder="First Name" required>
+                                      <input type="text" id="inputName" class="form-control" placeholder="First Name" name="fname" >
                                       <label for="inputName">First Name</label>
+                                      @error('first_name')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
                                   <div class="form-label-group">
-                                      <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required>
+                                      <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" name="lname" required>
                                       <label for="inputLastName">Last Name</label>
+                                      @error('last_name')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
                                   <div class="form-label-group">
-                                      <input type="text" id="inputUserName" class="form-control" placeholder="User Name" required>
+                                      <input type="text" id="inputUserName" class="form-control" placeholder="User Name" name="username" >
                                       <label for="inputUserName">User Name</label>
+                                      @error('user_name')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
                                   <div class="form-label-group">
-                                      <input type="text" id="inputUserName" class="form-control" placeholder="Your 10 digit phone number." pattern="^\d{10}$" required>
+                                      <input type="text" id="inputUserName" class="form-control" placeholder="Your 10 digit phone number." name="mobile" >
                                       <label for="phone">Phone Number</label>
+                                      @error('phone_number')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
                                   <div class="form-label-group">
-                                      <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+                                      <input type="text" id="inputEmail" class="form-control" placeholder="Email" name="email" required>
                                       <label for="inputEmail">Email</label>
+                                      @error('email')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
                                   <div class="form-label-group">
-                                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
                                       <label for="inputPassword">Password</label>
+                                      @error('password')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
                                   <div class="form-label-group">
-                                      <input type="password" id="inputConfPassword" class="form-control" placeholder="Confirm Password" required>
+                                      <input type="password" id="inputConfPassword" class="form-control" placeholder="Confirm Password" name="confirm_password" required>
                                       <label for="inputConfPassword">Confirm Password</label>
+                                      @error('confirm_password')
+                                      <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror
                                   </div>
 
                                   <div class="form-label-group">
-                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" required>
+                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" name="promo_code" required>
                                       <label for="promoCode">Promo Code</label>
                                   </div>
                                   <div class="form-group row">
                                       <div class="col-12">
                                           <fieldset class="checkbox">
-                                            <span class=""> By Registring, I agree to SkyWinner's <a href="#" data-toggle="modal" data-target="#large"> Terms & conditions and Privacy Policy</a>.</span>
+                                            <span class=""> By Registering, I agree to SkyWinner's <a href="#" data-toggle="modal" data-target="#large"> Terms & conditions and Privacy Policy</a>.</span>
                                             <div class="vs-checkbox-con vs-checkbox-primary">
                                               <input type="checkbox" checked>
                                               <span class="vs-checkbox">
@@ -74,7 +110,7 @@
                                       </div>
                                   </div>
                                   <a href="auth-login" class="btn btn-outline-primary float-left btn-inline mb-50">Login</a>
-                                  <button type="submit" class="btn btn-primary float-right btn-inline mb-50">Register</a>
+                                  <button type="submit" class="btn btn-primary float-right btn-inline mb-50">Register</button>
                               </form>
                           </div>
                       </div>
@@ -87,8 +123,8 @@
     <div class="modal fade text-left " id="large" role="dialog" >
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
-            <div class="modal-body">
-                <ul class="nav nav-pills nav-justified mb-0" id="myTab2" role="tablist">                 
+            <div class="modal-body p-0">
+                <ul class="nav nav-tabs nav-justified mb-0" id="myTab2" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" href="#term" role="tab">Terms & Conditions</a>
                     </li>

@@ -16,6 +16,7 @@ Route::get('/auth-login', 'AuthenticationController@login')->name('loginPage');
 Route::post('/login-action', 'AuthenticationController@loginAction');
 
 Route::get('/auth-register', 'AuthenticationController@register');
+Route::post('/auth-register', 'AuthenticationController@registerUser')->name('user.register');
 Route::get('/auth-forgot-password', 'AuthenticationController@forgot_password');
 Route::get('/auth-reset-password', 'AuthenticationController@reset_password');
 Route::get('/auth-lock-screen', 'AuthenticationController@lock_screen');

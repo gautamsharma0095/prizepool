@@ -181,7 +181,11 @@ return [
         'blankPage' => false,            // options[Boolean]: true, false(default)
         'mainLayoutType' => 'horizontal',          // Options[String]: horizontal, vertical(default)
         'direction' => env('MIX_CONTENT_DIRECTION', 'rtl') // Options[String]: ltr(default), rtl
-    ]
+    ],
+
+    'refer_amount' => 10,
+    'referer_amount_on_user_registration' => 5,
+    'referer_amount_on_user_transaction' => 5,
 ];
 
 /* Do changes in this file if you know the what it effects to your template. For more infomation refer the <a href="https://pixinvent.com/demo/vuexy-bootstrap-laravel-admin-template//documentation/documentation-laravel.html"> documentation </a> */
