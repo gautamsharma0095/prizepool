@@ -7,6 +7,8 @@ use App\Rules\MatchOldPassword;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Session;
 
 class AuthenticationController extends Controller
 {
@@ -127,28 +129,33 @@ class AuthenticationController extends Controller
 
     public function registerUser(Request $request)
     {
-//        $request->validate([
-//            'fname' => ['required'],
-//            'lname' => ['required'],
-//            'username' => ['required', 'unique:user_details'],
-//            'mobile' => ['required', 'digits:10', 'unique:user_details'],
-//            'email' => ['email', 'unique:user_details'],
-//            'password' => ['required'],
-//            'confirm_password' => ['same:password'],
-//        ]);
+        $validator = Validator::make($request->all(), [
+            'fname' => 'required',
+            'lname' => 'required',
+            'username' => 'required|unique:user_details',
+            'mobile' => 'required|digits:10|unique:user_details',
+            'email' => 'email|unique:user_details',
+            'password' => 'required',
+            'confirm_password' => 'same:password'
+        ]);
 
-        $referer = null;
+        if ($validator->fails()) {
+            Session::flash('error', $validator->messages()->first());
+            return redirect()->back();
+        }
+
+        /*$referer = null;
         if(!empty($request->promo_code)) {
 
             $referer = User::where('refer', $request->promo_code)->where('status', 1)->first();
-        }
+        }*/
 
-        if(is_null($referer)) {
+//        if(is_null($referer)) {
+//
+//            return back()->with('error', 'User registered successfully.');
+//        }
 
-            return back()->with('error', 'User registered successfully.');
-        }
-
-        $refer_bonus = $referer ? config('custom.refer_amount') : 0;
+        /*$refer_bonus = $referer ? config('custom.refer_amount') : 0;
         $today = date("Y-m-d");
 
         $user = new User;
@@ -183,6 +190,6 @@ class AuthenticationController extends Controller
             ]);
         }
 
-        return back()->with('success', 'User registered successfully.');
+        return back()->with('success', 'User registered successfully.');*/
     }
 }

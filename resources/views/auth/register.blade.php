@@ -14,6 +14,15 @@
               <div class="col-lg-6 d-lg-block d-none text-center align-self-center pl-0 pr-3 py-0">
                   <img src="{{ asset('images/pages/register.jpg') }}" alt="branding logo">
               </div>
+              @if (count($errors) > 0)
+                  <div class="alert alert-danger">
+                      <ul>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
               <div class="col-lg-6 col-12 p-0">
                   <div class="card rounded-0 mb-0 p-2">
                       <div class="card-header pt-50 pb-1">
