@@ -6,6 +6,14 @@
 @section('content')
     {{-- Dashboard Analytics Start --}}
     <section id="dashboard-analytics">
+      @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{ Session::get('success') }}
+            @php
+                Session::forget('success');
+            @endphp
+        </div>
+      @endif
         <div class="row">
             @foreach($games as $game)
                 <div class="col-md-4 col-12">

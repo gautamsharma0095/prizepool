@@ -29,8 +29,8 @@
                                   <div class="form-label-group">
                                       <input type="text" id="inputName" class="form-control" placeholder="First Name" name="fname" >
                                       <label for="inputName">First Name</label>
-                                      @error('first_name')
-                                      <span class="invalid-feedback" role="alert">
+                                      @error('fname')
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
@@ -38,8 +38,8 @@
                                   <div class="form-label-group">
                                       <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" name="lname" required>
                                       <label for="inputLastName">Last Name</label>
-                                      @error('last_name')
-                                      <span class="invalid-feedback" role="alert">
+                                      @error('lname')
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
@@ -47,8 +47,8 @@
                                   <div class="form-label-group">
                                       <input type="text" id="inputUserName" class="form-control" placeholder="User Name" name="username" >
                                       <label for="inputUserName">User Name</label>
-                                      @error('user_name')
-                                      <span class="invalid-feedback" role="alert">
+                                      @error('username')
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
@@ -56,8 +56,8 @@
                                   <div class="form-label-group">
                                       <input type="text" id="inputUserName" class="form-control" placeholder="Your 10 digit phone number." name="mobile" >
                                       <label for="phone">Phone Number</label>
-                                      @error('phone_number')
-                                      <span class="invalid-feedback" role="alert">
+                                      @error('mobile')
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
@@ -66,7 +66,7 @@
                                       <input type="text" id="inputEmail" class="form-control" placeholder="Email" name="email" required>
                                       <label for="inputEmail">Email</label>
                                       @error('email')
-                                      <span class="invalid-feedback" role="alert">
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
@@ -75,7 +75,7 @@
                                       <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
                                       <label for="inputPassword">Password</label>
                                       @error('password')
-                                      <span class="invalid-feedback" role="alert">
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
@@ -84,14 +84,14 @@
                                       <input type="password" id="inputConfPassword" class="form-control" placeholder="Confirm Password" name="confirm_password" required>
                                       <label for="inputConfPassword">Confirm Password</label>
                                       @error('confirm_password')
-                                      <span class="invalid-feedback" role="alert">
+                                      <span class="text-danger">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                       @enderror
                                   </div>
 
                                   <div class="form-label-group">
-                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" name="promo_code" required>
+                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" name="promo_code">
                                       <label for="promoCode">Promo Code</label>
                                   </div>
                                   <div class="form-group row">
@@ -105,7 +105,7 @@
                                                   <i class="vs-icon feather icon-check"></i>
                                                 </span>
                                               </span>
-                                            </div>                                        
+                                            </div>
                                           </fieldset>
                                       </div>
                                   </div>
@@ -138,18 +138,18 @@
                             <div class="card-content">
                                 <div class="card-body">
                                     {!! $term->content !!}
-                                </div>    
+                                </div>
                             </div>
-                        </div>              
+                        </div>
                     </div>
                     <div class="tab-pane" id="privacy">
                         <div class="card">
                             <div class="card-content">
                                 <div class="card-body">
                                     {!! $policy->content !!}
-                                </div>    
+                                </div>
                             </div>
-                        </div>                    
+                        </div>
                     </div>
                 </div>
             </div>

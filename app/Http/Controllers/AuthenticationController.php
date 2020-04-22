@@ -129,33 +129,28 @@ class AuthenticationController extends Controller
 
     public function registerUser(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'fname' => 'required',
-            'lname' => 'required',
-            'username' => 'required|unique:user_details',
-            'mobile' => 'required|digits:10|unique:user_details',
-            'email' => 'email|unique:user_details',
-            'password' => 'required',
-            'confirm_password' => 'same:password'
-        ]);
+        $request->validate([
+          'fname' => 'required',
+          'lname' => 'required',
+          'username' => 'required|unique:user_details',
+          'mobile' => 'required|digits:10|unique:user_details',
+          'email' => 'email|unique:user_details',
+          'password' => 'required',
+          'confirm_password' => 'same:password'
+      ]);
 
-        if ($validator->fails()) {
-            Session::flash('error', $validator->messages()->first());
-            return redirect()->back();
-        }
-
-        /*$referer = null;
+        $referer = null;
         if(!empty($request->promo_code)) {
 
             $referer = User::where('refer', $request->promo_code)->where('status', 1)->first();
-        }*/
+        }
 
 //        if(is_null($referer)) {
 //
 //            return back()->with('error', 'User registered successfully.');
 //        }
 
-        /*$refer_bonus = $referer ? config('custom.refer_amount') : 0;
+        $refer_bonus = $referer ? config('custom.refer_amount') : 0;
         $today = date("Y-m-d");
 
         $user = new User;
@@ -190,6 +185,10 @@ class AuthenticationController extends Controller
             ]);
         }
 
-        return back()->with('success', 'User registered successfully.');*/
+        if($user)
+        {
+          Auth::login($user);
+          return redirect('dashboard-analytics')->with('success', 'Your registered successfully.');
+        }
     }
 }
