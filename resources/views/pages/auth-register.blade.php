@@ -91,7 +91,7 @@
                                   </div>
 
                                   <div class="form-label-group">
-                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" name="promo_code">
+                                      <input type="text" id="promoCode" class="form-control" placeholder="Promo Code (optional)" value="{{ \request()->has('promo-code') ? \request()->get('promo-code') : '' }}" name="promo_code">
                                       <label for="promoCode">Promo Code</label>
                                   </div>
                                   <div class="form-group row">

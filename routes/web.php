@@ -44,6 +44,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/privacy-policy', 'MyAccountController@privacyPolicy')->name('privacy-policy');
     Route::get('/term-condition', 'MyAccountController@termCondition')->name('term-condition');
 
+    //Refer-And-Earn
+    Route::get('/refer-earn', 'ReferEarnController@index');
+    Route::post('/send-code', 'ReferEarnController@sendCode')->name('send-code');
+
 
     
   // Route Dashboards
