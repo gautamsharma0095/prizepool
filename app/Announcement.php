@@ -22,6 +22,11 @@ class Announcement extends Model
 
     public function getUnreadNotificationCount()
     {
-      return $this->join('announcement_read','announcement_read.announcement_id','<>','announcement_details.id')->count();
+      return $this->whereNotIn('id', function($query){
+        $query->select('announcement_id')
+        ->from(with(new AnnouncementRead)->getTable())
+        ->where('user_id','=', auth()->user()->id);
+      })
+      ->count();
     }
 }

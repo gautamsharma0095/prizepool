@@ -30,17 +30,17 @@
                             </li>
                             <li class="scrollable-container media-list">
                               @foreach ($notification->getTopFiveNotification() as $item)
-                            <a class="d-flex justify-content-between" href="javascript:void(0)">
+                            <a class="d-flex justify-content-between" href="{{ route('announcement.show',['id'=>$item->id]) }}">
                               <div class="media d-flex align-items-start">
                                   <div class="media-body">
                                   <h6 class="info media-heading">{{ $item->title }}</h6>
                                   </div><small>
-                                  <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last week{{ $item->created->diffForHumans() }}</time></small>
+                                  <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">{{ $item->created->diffForHumans() }}</time></small>
                               </div>
                           </a>
                             @endforeach
                             </li>
-                            <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                          <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="{{ route('announcement') }}">Read all notifications</a></li>
                         </ul>
                     </li>
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">

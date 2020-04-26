@@ -175,7 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\MenuServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+        yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 
@@ -228,7 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Helper' => App\Helpers\Helper::class,
-        'ImageResize' => Intervention\Image\Facades\Image::class
+        'ImageResize' => Intervention\Image\Facades\Image::class,
+        'Datatables' => yajra\Datatables\Datatables::class,
 
     ],
 

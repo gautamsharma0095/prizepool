@@ -23,7 +23,6 @@ Route::get('/auth-lock-screen', 'AuthenticationController@lock_screen');
 Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 
 
-
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@dashboardAnalytics');
     Route::get('/match/{id}', 'MatchController@show');
@@ -34,6 +33,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/matches/{id}', 'DashboardController@matches');
     Route::get('/change-password', 'AuthenticationController@changePassword')->name('changePassword');
     Route::post('/change-password-action', 'AuthenticationController@changePasswordAction')->name('changePasswordAction');
+
+    Route::get('/announcement', 'AnnouncementController@index')->name('announcement');
+    Route::get('announcement/list', 'AnnouncementController@list')->name('announcement.list');
+    Route::get('announcement/show/{id}', 'AnnouncementController@show')->name('announcement.show');
 
     Route::post('/profile/change-picture/{id}', 'ProfileController@changePicture')->name('profile.upload');
     Route::post('/profile/remove-picture/{id}', 'ProfileController@removePicture')->name('profile.remove');
