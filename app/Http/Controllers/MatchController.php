@@ -57,6 +57,22 @@ class MatchController extends Controller
         ]);
     }
 
+    public function matchResult($id)
+    {
+        $match = Match::findOrFail($id);
+        $participants = $this->participants($id);
+        $totalParticipants = Participant::where('match_id', $id)->count();
+        $firstThreeWinner = $match->firstThreeWinner();
+        $fullResult = $match->fullResult();
+        return view('matches.result', [
+            'match' => $match,
+            'participants' => $participants,
+            'totalParticipants' => $totalParticipants,
+            'firstThreeWinner' => $firstThreeWinner,
+            'fullResult' => $fullResult,
+        ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -27,6 +27,7 @@ Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'DashboardController@dashboardAnalytics');
     Route::get('/match/{id}', 'MatchController@show');
+    Route::get('/match-result/{id}', 'MatchController@matchResult');
     Route::get('/match/ongoing/{id}', 'DashboardController@ongoingMatches')->name("ongoing");
     Route::get('/match/upcoming/{id}', 'DashboardController@upcomingMatches')->name("upcoming");;
     Route::get('/match/finished/{id}', 'DashboardController@finishedMatches')->name("finished");;
@@ -45,7 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/term-condition', 'MyAccountController@termCondition')->name('term-condition');
 
 
-    
+
   // Route Dashboards
   Route::get('/dashboard-analytics', 'DashboardController@dashboardAnalytics');
   Route::get('/dashboard-ecommerce', 'DashboardController@dashboardEcommerce');

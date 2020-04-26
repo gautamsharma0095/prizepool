@@ -64,4 +64,14 @@ class Match extends Model
     public function participants(){
       return $this->hasMany(Participant::class);
     }
+
+    public function firstThreeWinner(){
+      $winner = $this->participants()->where('match_id',$this->id)->whereIn('win',[1,2,3])->orderBy('win','asc')->get();
+      return $winner;
+    }
+
+    public function fullResult(){
+      $winner = $this->participants()->where('match_id',$this->id)->orderBy('prize','desc')->get();
+      return $winner;
+    }
 }

@@ -146,12 +146,12 @@ class Helper
             }
         }
     }
-    
+
     public static function showDate($date = '') {
             if ($date == '' || $date == null || $date == '0000-00-00 00:00:00') {
             return '-';
         }
-    
+
         $format = config('config.date_format') ?: 'd/m/Y';
         return \Carbon\Carbon::parse($date)->format($format);
     }

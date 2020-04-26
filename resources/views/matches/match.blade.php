@@ -75,6 +75,11 @@
                   <a href="{{ url('/match', $match->id) }}" class="btn gradient-light-primary white waves-effect waves-light float-right">Play Now</a>
                   @endisset
 
+                  @isset($finished)
+                  <a href="{{ $match->spectate_url }}" class="btn gradient-light-success white waves-effect waves-light">Watch</a>
+                  <a href="{{ url('/match-result', $match->id) }}" class="btn gradient-light-primary white waves-effect waves-light float-right">Result</a>
+                  @endisset
+
                 </div>
             </div>
         </div>

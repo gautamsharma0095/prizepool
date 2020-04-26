@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Match;
 use Illuminate\Http\Request;
 use App\Game;
+use App\Participant;
 
 class DashboardController extends Controller
 {
@@ -48,7 +49,7 @@ class DashboardController extends Controller
 
       $gameId = $id;
       $finished = 1;
-      $matches = Match::finished()->where('game_id', $id)->get();
+      $matches = Match::finished()->where('game_id', $id)->join('participant_details','participant_details.match_id','=','match_details.id')->where("participant_details.user_id",auth()->user()->id)->select('match_details.*')->distinct('match_details.id')->get();
 
         return view('dashboard.match', [
             'matches' => $matches,
