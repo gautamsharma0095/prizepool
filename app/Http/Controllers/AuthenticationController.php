@@ -142,13 +142,8 @@ class AuthenticationController extends Controller
         $referer = null;
         if(!empty($request->promo_code)) {
 
-            $referer = User::where('refer', $request->promo_code)->where('status', 1)->first();
+            $referer = User::where('refer', $request->promo_code)->where('status', 1)->where('is_block', 0)->first();
         }
-
-//        if(is_null($referer)) {
-//
-//            return back()->with('error', 'User registered successfully.');
-//        }
 
         $refer_bonus = $referer ? config('custom.refer_amount') : 0;
         $today = date("Y-m-d");
