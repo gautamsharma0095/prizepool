@@ -21,7 +21,7 @@
                   @php
                     $notification =new App\Announcement();
                   @endphp
-                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-danger badge-glow badge-up">{{ $notification->getUnreadNotificationCount() }} </span></a>
+                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i> @if($notification->getUnreadNotificationCount() > 0) <span class="badge badge-pill badge-danger badge-glow badge-up">{{ $notification->getUnreadNotificationCount() }} </span> @endif </a>
                         <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                             <li class="dropdown-menu-header">
                                 <div class="dropdown-header m-0 p-2">
